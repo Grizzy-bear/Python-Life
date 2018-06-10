@@ -45,6 +45,6 @@ for imag in image:
         file.write(res.content)
         print('成功')
 # os.system('gsettings set org.gnome.desktop.background picture-uri http://file:///home/radioactive/Bing/'+cd+'.jpg')
-os.system(gsettings set org.mate.background picture-filename Dirname)
+#os.system(gsettings set org.mate.background picture-filename Dirname)
 
 
