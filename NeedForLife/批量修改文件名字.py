@@ -40,7 +40,8 @@ def file_name(file_dir):
             # print(type(file))
 
 
-file_name("C:\\Users\\Vencent\\Desktop\\单田芳评书大破冲霄楼")
+# file_name("C:\\Users\\Vencent\\Desktop\\单田芳评书大破冲霄楼")
+file_name("/home/lamplight/Desktop/test")
 
 # def name(args):
 #     files = os.listdir(args)

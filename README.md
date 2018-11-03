@@ -16,4 +16,3 @@
 ### 顺便写一下markdown里的超链接，这是我的Github账户[GrizzlyBear](https://github.com/Grizzy-bear)
 
 ***
-#### 鄙人很崇拜女黑客
