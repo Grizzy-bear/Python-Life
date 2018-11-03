@@ -1,2 +1,6 @@
-./NeedForLife/ximalaya/files/
+ximalaya/files/
+
 *.m4a
+
+*.wav
+*.mp3
