@@ -2,16 +2,6 @@ import os
 import sys
 import re
 
-# if __name__ == '__main__':
-#     # main()
-#     pre = ''
-#     mark = "%s"%pre
-#     # 获得目录下的文件名字
-#     old = os.listdir("C:\\Users\\Vencent\\Desktop\\单田芳评书大破冲霄楼")
-#     for old_name in old:
-#         if old_name != sys.argv[0]:
-#             print(old_name)
-
 
 def file_name(file_dir):
     i = 1
@@ -43,12 +33,3 @@ def file_name(file_dir):
 # file_name("C:\\Users\\Vencent\\Desktop\\单田芳评书大破冲霄楼")
 file_name("/home/lamplight/Desktop/test")
 
-# def name(args):
-#     files = os.listdir(args)
-#     print('input:'+args)
-#     for file in files:
-#         # a = file.replace()
-#         print(file)
-
-# if __name__ == '__main__':
-#     name(sys.argv[1])
