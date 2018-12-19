@@ -3,10 +3,14 @@
 
 #### 目录
 
+* [shell](#shell)
 * [ximalaya](#ximalaya)
 * [密码加密](#密码加密)
 * [操作数据库](#操作数据库)
 * [零星脚本](#零星脚本)
+
+### shell
+这部分主要是日产使用的shell部分，记录一下,详细请转[shell](https://github.com/Grizzy-bear/Python-Life/tree/master/shell "shell地址")
 
 ### ximalaya
 这一部分主要是用Python获取json文件，然后保存了m4a格式的音频，然后使用shell脚本并行批量转换个格式
