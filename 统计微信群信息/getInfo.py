@@ -3,7 +3,7 @@ import time
 from itchat.content import TEXT
 import csv
 
-itchat.auto_login(enableCmdQR=True)
+itchat.auto_login(enableCmdQR=False)
 # itchat.auto_login(hotReload=True)
 roomslist = []
 
