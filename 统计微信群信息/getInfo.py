@@ -3,7 +3,7 @@ import time
 from itchat.content import TEXT
 import csv
 
-itchat.auto_login(enableCmdQR=False)
+itchat.auto_login(enableCmdQR=True)
 # itchat.auto_login(hotReload=True)
 roomslist = []
 
@@ -26,14 +26,23 @@ female = 0
 male = 0
 
 # 写入到CSV
-csvFile = open('csvData.csv','a+')
-writer = csv.writer(csvFile)
-writer.writerow(['名字','显示名字','性别','身高','地点','签名','头像'])
-csvFile.close()
+# csvFile = open('csvData.csv','a')
+# writer = csv.writer(csvFile)
+# writer.writerow(['名字','显示名字','性别','身高','地点','签名','头像'])
 
-for i in range(total):
-    pass
-    # print(memberList['MemberList'][i])
+# csvFile.close()
+
+# def get_stature(name):
+#     pass
+
+# for i in range(total):
+#     name = memberList['MemberList'][i]["NickName"]
+#     displayname = memberList['MemberList'][i]['DisplayName']
+#     sex = memberList['MemberList'][i]['Sex']
+#     stature = get_stature(displayname)
+#     location = 
+
+print(memberList['MemberList'][i])
 
 #     if memberList['MemberList'][i]['Sex'] == 2:
 #         female += 1
