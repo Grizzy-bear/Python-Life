@@ -51,15 +51,49 @@ class Info(object):
         # pass
         m = self.dealInfo(self.content)
         while True:
-            num = re.sub("\D", " ", m)
+            num = re.sub("\d", " ", m)
             c = num.strip()
             word = jieba.__lcut(c)
+            """  
+            待处理一些图文符号
+            """
+
             while ' ' in word:
                 word.remove(' ')
         return word
     
+    def sortNum(self, num):
+        """  
+        处理剩下数字的结果，并且排序，无值设0
+        功能:
+            97年 28  ，识别判断输出年龄
+        ------
+        age | stature
+
+        """
+        pass
+    
+    def sortWord(self, word):
+        """  
+        处理剩下文字的结果，并排序列,
+        功能:
+            识别文字地点，其他文字，英语
+            例如：北京  我就是我  cnncncn， 提取地点
+
+        ------
+        location
+
+        """
+        pass
+
     def end(self):
         '''  
         处理所有结果，并且返回数组
         '''
+        # pass
+        number = self.getNumber()
+        Word = self.getLocation()
         pass
+    
+
+
