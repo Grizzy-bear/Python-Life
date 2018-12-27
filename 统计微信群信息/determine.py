@@ -1,4 +1,5 @@
 import re
+import jieba
 
 
 class Info(object):
@@ -14,7 +15,7 @@ class Info(object):
         try:
             _dealString = re.sub("[\!\%\[\]\,\。\()\-\~]", " ", String)
         except expression as identifier:
-            pass
+            raise ValueError("无法正则")
         return _dealString
 
     @dealInfo.setter
@@ -27,18 +28,35 @@ class Info(object):
         else:
             _dealString = value
 
-
+    # @classmethod
     def getNumber(self):
         '''  
         过滤剩下文字，并且剩下排序返回数组
         '''
-        pass
+        # pass
+        m = self.dealInfo(self.content)
+        while True:
+            num = re.sub("\D", " ", m)
+            c = num.strip()
+            new = jieba.__lcut(c)
+            while ' ' in new:
+                new.remove(' ')
+        return new
 
+    
     def getLocation(self):
         ''' 
         处理文字部分，返回文字数组   
         '''
-        pass
+        # pass
+        m = self.dealInfo(self.content)
+        while True:
+            num = re.sub("\D", " ", m)
+            c = num.strip()
+            word = jieba.__lcut(c)
+            while ' ' in word:
+                word.remove(' ')
+        return word
     
     def end(self):
         '''  
