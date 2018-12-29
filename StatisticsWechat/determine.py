@@ -89,6 +89,8 @@ class Info(object):
                     elif 10 < num[0] < 30:
                         num.insert(0, 0)
                         return num
+                    elif 0 <= num[0] <= 10:
+                        print("erro")
                     else:
                         raise ValueError("出错")
                 elif len(num) == 2:
@@ -103,14 +105,19 @@ class Info(object):
                             num.pop()
                             num.insert(0, 0)
                             return num
+                        elif 100 <= num[1] <= 300:
+                            num[0], num[1] = num[1], num[0]
+                            return num
                         elif 10 < num[1] < 30:
                             num.pop(0)
                             num.extend([0])
+                            
                             return num
                         else:
-                            num.pop()
-                            num.insert(0, 0)
-                            return num
+                            # num.pop()
+                            # num.insert(0, 0)
+                            # return num
+                            raise ValueError("第一个数字是出生年月，第二个数字无法判别")
                     elif 10 < num[0] < 30:
                         """ 只有年龄 """
                         num.pop()
@@ -123,6 +130,8 @@ class Info(object):
                 self.sortNum(num)
             else:
                 raise ValueError("输入不对")
+        else:
+            raise ValueError("不是数组")
         return num
 
         # elif num[0] > 100:
