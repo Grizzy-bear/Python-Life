@@ -5,3 +5,5 @@ ximalaya/files/
 *.wav
 *.mp3
 *.pyc
+StatisticsWechat/test/.cache
+StatisticsWechat/__pycache__
