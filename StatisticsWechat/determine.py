@@ -76,8 +76,8 @@ class Info(object):
         if isinstance(num, list):
             Sort = sorted(num, reverse=True)
             if 0 <= len(num) <= 2:
-               if len(num) == 0:
-                    newNum.extend([0, 0])
+                if len(num) == 0:
+                    num.extend([0, 0])
                 elif len(num) == 1:
                     """ 判断第一个数是哪一个 """
                     if num[0] > 100:

@@ -3,7 +3,7 @@ if isinstance(num, list):
     # print("ok")
     print(sorted(num, reverse=True))
 
-numa = []
+numa = [1]
 print(len(numa))
 
 num.insert(0,0)
@@ -12,3 +12,4 @@ print(num)
 #     print(i)
 num.pop(0)
 print(num)
+print(len(numa))
