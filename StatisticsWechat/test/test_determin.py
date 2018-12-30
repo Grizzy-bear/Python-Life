@@ -8,3 +8,6 @@ def test_Info_sortNum():
     assert test_info[0] == 183
     assert test_info == [183,90]
     # print(test_info)
+def test_Info_getLocation():
+    test_get_number = Info(["男", "-", 182, 95]).getNumber()
+    assert test_get_number == [182,95]

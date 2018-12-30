@@ -7,15 +7,16 @@ class Info(object):
         self.content = content
 
     @property
-    def dealInfo(self, String):
+    def dealInfo(self):
         # pass
         '''
         去除多于符号，后续分类处理文字和数字
         '''
         try:
-            _dealString = re.sub("[\!\%\[\]\,\。\()\-\~]", " ", String)
-        except expression as identifier:
-            raise ValueError("无法正则")
+            _dealString = re.sub("[\!\%\[\]\,\。\()\-\~]", " ", self.content)
+        except NameError as identifier:
+            # raise ValueError("无法正则")
+            print(identifier)
         return _dealString
 
     @dealInfo.setter
