@@ -12,5 +12,8 @@ def test_Info_sortNum():
 
 
 def test_Info_getLocation():
-    test_get_number = Info(["男", "-", 182, 95]).getNumber()
-    assert test_get_number == [182, 95]
+    # test_get_number = Info(("男", "-", 182, 95)).getNumber()
+    test_get_number = Info("男-北京-187-89")
+    test_result = test_get_number.getNumber("男-北京-182-95")
+    assert test_result == ['182','95']
+>>>>>>> da2077c09e41b14d8817f7e25f9a2af17d5ffa9b
