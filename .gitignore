@@ -7,3 +7,4 @@ ximalaya/files/
 *.pyc
 StatisticsWechat/test/.cache
 StatisticsWechat/__pycache__
+*.orig
