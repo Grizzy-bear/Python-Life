@@ -7,3 +7,7 @@ ximalaya/files/
 *.pyc
 StatisticsWechat/test/.cache
 StatisticsWechat/__pycache__
+StatisticsWechat/__pycache__/determine.cpython-36.pyc
+*.pyc
+StatisticsWechat/test/.cache/v/cache/lastfailed
+StatisticsWechat/test/__pycache__/test_determin.cpython-36-PYTEST.pyc
