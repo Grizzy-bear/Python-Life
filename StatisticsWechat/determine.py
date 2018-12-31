@@ -4,44 +4,50 @@ import jieba
 
 class Info(object):
     def __init__(self, content):
+        # while True:
         self.content = content
 
-    @property
-    def dealInfo(self):
-        # pass
+    # @classmethod
+    @staticmethod
+    # @property
+    def dealInfo(content):
+        # pass 
         '''
         去除多于符号，后续分类处理文字和数字
+        test
         '''
+        assert type(content) == str
         try:
-            _dealString = re.sub("[\!\%\[\]\,\。\()\-\~]", " ", self.content)
+            _dealString = re.sub("[\!\%\[\]\,\。\()\-\~]", " ", content)
         except NameError as identifier:
             # raise ValueError("无法正则")
             print(identifier)
         return _dealString
 
-    @dealInfo.setter
-    def dealInfo(self, value):
-        '''
-        判断去除非数字文字的符号后判断是否有属性
-        '''
-        if value == None:
-            raise ValueError("值没有属性")
-        else:
-            _dealString = value
+    # @dealInfo.setter
+    # def dealInfo(value):
+    #     '''
+    #     判断去除非数字文字的符号后判断是否有属性
+    #     '''
+    #     if value == None:
+    #         raise ValueError("值没有属性")
+    #     else:
+    #         _dealString = value
 
-    # @classmethod
-    def getNumber(self):
+    @classmethod
+    def getNumber(cls, Value):
         '''
         过滤剩下数字，并且剩下排序返回数组
         '''
         # pass
-        m = self.dealInfo(self.content)
-        while True:
-            num = re.sub("\D", " ", m)
-            c = num.strip()
-            new = jieba.__lcut(c)
-            while ' ' in new:
-                new.remove(' ')
+        m = cls.dealInfo(Value)
+        # while True:
+        num = re.sub("\D", " ", m)
+        c = num.strip()
+        new = jieba.lcut(c)
+        while ' ' in new:
+            new.remove(' ')
+        # newcls = cls(new)
         return new
 
     def getLocation(self):
