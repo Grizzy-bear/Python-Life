@@ -17,3 +17,6 @@ def test_Info_getLocation():
     test_result = test_get_number.getNumber("男-北京-182-95")
     assert test_result == ['182','95']
     print("ok")
+
+def test_Info_sortWord():
+    pass

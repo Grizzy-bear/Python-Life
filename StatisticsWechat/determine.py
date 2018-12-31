@@ -44,7 +44,7 @@ class Info(object):
         # while True:
         num = re.sub("\D", " ", m)
         c = num.strip()
-        new = jieba.lcut(c)
+        new = jieba.__lcut(c)
         while ' ' in new:
             new.remove(' ')
         # newcls = cls(new)
