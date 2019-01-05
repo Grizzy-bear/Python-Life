@@ -1,5 +1,12 @@
 import re
+# import jieba
 import jieba
+import json
+
+def test2word(value):
+    if isinstance(value, str) == True:
+        newWord = jieba.__lcut(value)
+    return newWord
 
 
 class Info(object):
@@ -7,69 +14,71 @@ class Info(object):
         # while True:
         self.content = content
 
-    # @classmethod
+
     @staticmethod
-    # @property
     def dealInfo(content):
-        # pass 
         '''
+        ok
+
         去除多于符号，后续分类处理文字和数字
         test
         '''
         assert type(content) == str
         try:
-            _dealString = re.sub("[\!\%\[\]\,\。\()\-\~]", " ", content)
+            _dealString = re.sub("[\!\%\[\]\,\。\()\-\~\_]", " ", content)
         except NameError as identifier:
             # raise ValueError("无法正则")
             print(identifier)
         return _dealString
 
-    # @dealInfo.setter
-    # def dealInfo(value):
-    #     '''
-    #     判断去除非数字文字的符号后判断是否有属性
-    #     '''
-    #     if value == None:
-    #         raise ValueError("值没有属性")
-    #     else:
-    #         _dealString = value
 
-    @classmethod
-    def getNumber(cls, Value):
+    @staticmethod
+    def getNumber(Value):
         '''
+        ok
+
         过滤剩下数字，并且剩下排序返回数组
         '''
         # pass
-        m = cls.dealInfo(Value)
+        m = Info.dealInfo(Value)
         # while True:
         num = re.sub("\D", " ", m)
         c = num.strip()
-        new = jieba.__lcut(c)
+        # new = jieba.__lcut(c)
+        # new = jieba.lcut(c)
+        # new = jieba.__lcut(c)
+        new = test2word(c)
         while ' ' in new:
             new.remove(' ')
         # newcls = cls(new)
         return new
 
+
     def getLocation(self):
         '''
+        ok
+
         处理文字部分，返回文字数组
         '''
         # pass
         m = self.dealInfo(self.content)
-        while True:
-            num = re.sub("\d", " ", m)
-            c = num.strip()
-            word = jieba.__lcut(c)
-            """
-            待处理一些图文符号
-            """
+        
+        num = re.sub("\d", " ", m)
+        c = num.strip()
+        # word = jieba.__lcut(c)
+        word = test2word(c)
+        """
+        待处理一些图文符号
+        """
 
-            while ' ' in word:
-                word.remove(' ')
+        while ' ' in word:
+            word.remove(' ')
         return word
 
     def sortNum(self, num):
         """
+        ok
+
         处理剩下数字的结果，并且排序，无值设0
         功能:
             182 97年 28  ，识别判断输出年龄和身高
@@ -149,7 +158,7 @@ class Info(object):
         #     else:
         #         newNum.append([num[0]]) """ 年龄 """
 
-    def sortWord(self, word):
+    def sortWord(self, word=[]):
         """  
         处理剩下文字的结果，并排序列,
         功能:
@@ -160,7 +169,23 @@ class Info(object):
         location
 
         """
-        pass
+        jsonFile = './city.json'
+        province = json.loads(jsonFile)
+        # for city in province['name']:
+        #     print(city)
+        return province['name'][0]
+
+        if isinstance(word, list):
+            for i in word:
+                if len(i) == 1:
+                    continue
+                """ 添加后缀（市区） """
+                new1 = word + "市"
+                new2 = word + "区"
+            pass
+
+        else:
+            raise ValueError("格式不对")
 
     def end(self):
         '''  

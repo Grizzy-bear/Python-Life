@@ -1,15 +1,18 @@
-num = [1,2,3,4]
-if isinstance(num, list):
-    # print("ok")
-    print(sorted(num, reverse=True))
+import json
+import demjson
 
-numa = [1]
-print(len(numa))
+aa = "北京"
+bb = "男"
 
-num.insert(0,0)
-print(num)
-# for i in num:
-#     print(i)
-num.pop(0)
-print(num)
-print(len(numa))
+print(len(aa))
+print(len(bb))
+
+jsonFile = './city.json'
+dealJson = demjson.decode(jsonFile)
+
+# province = json.load(jsonFile)
+print(dealJson[0]['name'][0])
+
+""" 
+处理json文件
+ """

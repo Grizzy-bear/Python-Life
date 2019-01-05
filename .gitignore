@@ -5,6 +5,8 @@ ximalaya/files/
 *.wav
 *.mp3
 *.pyc
-StatisticsWechat/test/.cache
-StatisticsWechat/__pycache__
+
 *.orig
+*.pyc
+*.pyc
+StatisticsWechat/test/.cache/v/cache/lastfailed
