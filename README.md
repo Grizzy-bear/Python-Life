@@ -1,7 +1,7 @@
 
 As a daily exercise
 ---------------------
-[中文版]()
+[中文版](https://github.com/Grizzy-bear/Python-Life/blob/master/README-zh.md)
 
 #### directory
 
@@ -19,7 +19,7 @@ As a daily exercise
 
 #### shell
 
-This part is mainly nissan use shell part, writing, a detailed go [shell] "shell" address (https://github.com/Grizzy-bear/Python-Life/tree/master/shell)
+This part is mainly nissan use shell part, writing, a detailed go [shell](https://github.com/Grizzy-bear/Python-Life/tree/master/shell "shell address")
 
 
 #### ximalaya
@@ -36,7 +36,7 @@ Manipulate the database
 
 Use SQLAlchemy processing to generate the invitation code and false information, saved to Mysql
 
-You can jump to [here] (https://github.com/Grizzy-bear/Python-Life/blob/master/%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/READE.md)
+You can jump to [here](https://github.com/Grizzy-bear/Python-Life/blob/master/%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/READE.md)
 
 
 Sporadic scripts
