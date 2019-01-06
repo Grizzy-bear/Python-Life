@@ -6,15 +6,15 @@ As a daily exercise
 #### directory
 
 
-* [shell] (shell)
+* [shell](shell)
 
-* [ximalaya] (# ximalaya)
+* [ximalaya](#ximalaya)
 
-* [password encryption](# password encryption)
+* [password encryption](#password encryption)
 
-* [operation database](# operation database)
+* [operation database](#operation database)
 
-* [spotty scripts](# spotty scripts)
+* [spotty scripts](#spotty scripts)
 
 
 #### shell
