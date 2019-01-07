@@ -169,19 +169,26 @@ class Info(object):
         location
 
         """
-        jsonFile = './city.json'
-        province = json.loads(jsonFile)
-        # for city in province['name']:
-        #     print(city)
-        return province['name'][0]
+        BASEDIR = os.getcwd() + '\pactice\Python-Life\Python-Life\StatisticsWechat\city.json'
+        out = re.sub(r'\\','/',BASEDIR)
+        f1 = open(out, 'rb')
+        content = f1.read()
+        f1.close()
+        # print(content)
+        text = json.loads(content)
+        new = json_normalize(text)
+        # print(new)
+        df = pd.DataFrame(new)
+        name = df.loc[:,'name']
 
         if isinstance(word, list):
             for i in word:
                 if len(i) == 1:
                     continue
                 """ 添加后缀（市区） """
-                new1 = word + "市"
-                new2 = word + "区"
+                new1 = word + "省"
+                new2 = word + "市"
+                new3 = word + "区"
             pass
 
         else:
