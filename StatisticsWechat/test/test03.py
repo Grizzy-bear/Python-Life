@@ -51,6 +51,9 @@ for i in name:
 
 city = df.loc[:,'name']
 print(city)
+
+
+
 # for j in city:
 #     # print(j)
 #     if j == None:
